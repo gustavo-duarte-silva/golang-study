@@ -8,12 +8,13 @@ const prefixHelloSpanish = "Hola, "
 const prefixHelloFrances = "Bonjour, "
 
 func prefixSaudacao(idioma string) (prefixo string) {
-	prefixo = prefixHello
 	switch idioma {
 	case "frances":
 		prefixo = prefixHelloFrances
 	case "spanish":
 		prefixo = prefixHelloSpanish
+	default:
+		prefixo = prefixHello
 	}
 	return
 }
