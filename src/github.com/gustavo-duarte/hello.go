@@ -7,18 +7,22 @@ const prefixHello = "Hello, "
 const prefixHelloSpanish = "Hola, "
 const prefixHelloFrances = "Bonjour, "
 
-func Hello(nome string, idioma string) string {
-	prefixo := prefixHello
-	if nome == "" {
-		nome = "World"
-	}
+func prefixSaudacao(idioma string) (prefixo string) {
+	prefixo = prefixHello
 	switch idioma {
 	case "frances":
 		prefixo = prefixHelloFrances
 	case "spanish":
 		prefixo = prefixHelloSpanish
 	}
-	return prefixo + nome
+	return prefixo
+}
+
+func Hello(nome string, idioma string) string {
+	if nome == "" {
+		nome = "World"
+	}
+	return prefixSaudacao(idioma) + nome
 }
 
 func main() {
