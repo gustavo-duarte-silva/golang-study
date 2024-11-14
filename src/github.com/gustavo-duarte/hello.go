@@ -2,8 +2,11 @@ package main
 
 import "fmt"
 
+//Evita de criar variaveis a todo momento!
+const prefixHello = "Hello, "
+
 func Hello(nome string) string {
-	return "Olá, " + nome
+	return prefixHello + nome
 }
 
 func main() {
