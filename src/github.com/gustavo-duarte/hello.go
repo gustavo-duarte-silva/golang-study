@@ -15,7 +15,7 @@ func prefixSaudacao(idioma string) (prefixo string) {
 	case "spanish":
 		prefixo = prefixHelloSpanish
 	}
-	return prefixo
+	return
 }
 
 func Hello(nome string, idioma string) string {
